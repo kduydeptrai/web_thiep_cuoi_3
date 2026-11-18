@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#f8e1ea">
+    <title>💗 Thiệp Cưới Minh Anh & Tuấn Kiệt 💗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        :root {
+            /* ===== BẢNG MÀU HỒNG DỊU (DUSTY ROSE PASTEL) ===== */
+            --pink-deep: #b56b8a;        /* Hồng đậm dịu - thay cho #d6336c */
+            --pink-main: #d99bb3;         /* Hồng chủ đạo - thay cho #ff85a2 */
+            --pink-soft: #e8bcd0;         /* Hồng nhạt - thay cho #ffb6d5 */
+            --pink-pale: #f2d4e0;         /* Hồng phấn - thay cho #ffd1e0 */
+            --pink-cream: #fae8ef;        /* Hồng kem - thay cho #ffe6f0 */
+            --pink-mist: #fdf3f7;         /* Hồng sương - thay cho #fff0f5 */
+            --text-dark: #7a4a5e;         /* Nâu hồng đậm - thay cho #8a4a63 */
+            --text-mid: #9a6478;          /* Trung tính - thay cho #a64d6d */
+            --text-soft: #b08399;         /* Nhạt - thay cho #c94f7c */
+            --white: #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: linear-gradient(135deg, var(--pink-cream) 0%, var(--pink-mist) 30%, var(--pink-pale) 60%, #f8dfe9 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+            font-family: 'Playfair Display', serif;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+        /* ===== AMBIENT GLOW ===== */
+        .ambient-glow {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            animation: orbFloat 12s ease-in-out infinite;
+        }
+
+        .glow-orb:nth-child(1) {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, var(--pink-soft), transparent);
+            top: 10%; left: -5%;
+        }
+        .glow-orb:nth-child(2) {
+            width: 250px; height: 250px;
+            background: radial-gradient(circle, var(--pink-main), transparent);
+            top: 60%; right: -5%;
+            animation-delay: 3s;
+        }
+        .glow-orb:nth-child(3) {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, var(--pink-pale), transparent);
+            bottom: -5%; left: 40%;
+            animation-delay: 6s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            33% { transform: translate(30px, -40px) scale(1.2); opacity: 0.5; }
+            66% { transform: translate(-20px, 30px) scale(0.9); opacity: 0.3; }
+        }
+
+        /* ===== BOKEH ===== */
+        .bokeh-layer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bokeh {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232, 188, 208, 0.5), transparent 70%);
+            animation: bokehPulse ease-in-out infinite;
+        }
+
+        @keyframes bokehPulse {
+            0%, 100% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.5); opacity: 0.6; }
+        }
+
+        /* ===== NỀN BAY ===== */
+        .hearts-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-icon {
+            position: absolute;
+            animation: floatUp linear infinite;
+            opacity: 0;
+        }
+
+        .floating-icon svg {
+            width: 100%; height: 100%;
+            filter: drop-shadow(0 2px 4px rgba(217, 155, 179, 0.4));
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.5); opacity: 0; }
+            10% { opacity: 0.85; }
+            90% { opacity: 0.85; }
+            100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
+        }
+
+        .petal-icon {
+            position: absolute;
+            animation: fall linear infinite;
+            opacity: 0.75;
+        }
+
+        .petal-icon svg {
+            width: 100%; height: 100%;
+            filter: drop-shadow(0 2px 3px rgba(232, 188, 208, 0.35));
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0) rotate(0deg); }
+            50% { transform: translateY(50vh) translateX(40px) rotate(360deg) scale(1.1); }
+            100% { transform: translateY(110vh) translateX(100px) rotate(720deg); }
+        }
+
+        /* ===== TRAIL SPARKLE ===== */
+        .trail-sparkle {
+            position: fixed;
+            pointer-events: none;
+            animation: trailFade ease-out forwards;
+        }
+
+        .trail-sparkle svg {
+            width: 100%; height: 100%;
+            filter: drop-shadow(0 0 6px rgba(232, 188, 208, 0.9));
+        }
+
+        @keyframes trailFade {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1) rotate(180deg); opacity: 1; }
+            100% { transform: scale(0) rotate(360deg); opacity: 0; }
+        }
+
+        .dreamy-overlay {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 45%, rgba(242, 212, 224, 0.15) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ===== THIỆP ===== */
+        .invitation-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 40px;
+            border: 2px solid var(--pink-pale);
+            box-shadow:
+                0 20px 60px rgba(217, 155, 179, 0.25),
+                inset 0 0 30px rgba(242, 212, 224, 0.3);
+            padding: 60px 50px;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 1.5s ease-out, cardGlow 5s ease-in-out 1.5s infinite;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: scale(0.9) translateY(50px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes cardGlow {
+            0%, 100% {
+                box-shadow:
+                    0 20px 60px rgba(217, 155, 179, 0.25),
+                    inset 0 0 30px rgba(242, 212, 224, 0.3);
+            }
+            50% {
+                box-shadow:
+                    0 20px 70px rgba(217, 155, 179, 0.35),
+                    inset 0 0 40px rgba(242, 212, 224, 0.4),
+                    0 0 30px rgba(232, 188, 208, 0.3);
+            }
+        }
+
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 40px;
+            padding: 2px;
+            background: linear-gradient(45deg,
+                var(--pink-pale), var(--pink-main), var(--pink-soft),
+                var(--pink-deep), var(--pink-soft), var(--pink-main), var(--pink-pale));
+            background-size: 300% 300%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: borderShimmer 6s linear infinite;
+            pointer-events: none;
+            z-index: 3;
+            opacity: 0.55;
+        }
+
+        @keyframes borderShimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        /* ===== GÓC TRANG TRÍ ===== */
+        .corner-decoration {
+            position: absolute;
+            width: 80px; height: 80px;
+            opacity: 0.65;
+            animation: twinkle 3s ease-in-out infinite;
+            z-index: 4;
+            filter: drop-shadow(0 0 8px rgba(232, 188, 208, 0.5));
+        }
+
+        .corner-decoration svg { width: 100%; height: 100%; }
+        .corner-tl { top: 10px; left: 15px; }
+        .corner-tr { top: 10px; right: 15px; transform: scaleX(-1); }
+        .corner-bl { bottom: 10px; left: 15px; transform: scaleY(-1); }
+        .corner-br { bottom: 10px; right: 15px; transform: scale(-1); }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.85; }
+        }
+
+        /* ===== HEADER ===== */
+        .header-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: var(--text-soft);
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease 0.3s both, textGlow 3s ease-in-out 1.3s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subtitle svg { width: 28px; height: 28px; }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(217, 155, 179, 0.3); }
+            50% { text-shadow: 0 0 20px rgba(217, 155, 179, 0.6), 0 0 30px rgba(232, 188, 208, 0.5); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== TÊN ===== */
+        .title-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 72px;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .name-shimmer {
+            position: relative;
+            background: linear-gradient(90deg,
+                var(--pink-deep) 0%,
+                var(--pink-main) 25%,
+                var(--pink-soft) 50%,
+                var(--pink-main) 75%,
+                var(--pink-deep) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s linear infinite;
+            filter: drop-shadow(0 2px 4px rgba(217, 155, 179, 0.35));
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        .ampersand {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px; height: 55px;
+            animation: heartbeat 1.5s ease-in-out infinite, heartGlowPulse 2s ease-in-out infinite;
+        }
+
+        .ampersand svg { width: 100%; height: 100%; }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.2); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.12); }
+            60% { transform: scale(1); }
+        }
+
+        @keyframes heartGlowPulse {
+            0%, 100% { filter: drop-shadow(0 0 8px rgba(217, 155, 179, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(217, 155, 179, 0.9)); }
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            gap: 15px;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .divider-line {
+            height: 1px;
+            width: 80px;
+            background: linear-gradient(90deg, transparent, var(--pink-soft), transparent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .divider-line::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -50%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, var(--pink-deep), transparent);
+            animation: lineShimmer 2.5s ease-in-out infinite;
+        }
+
+        @keyframes lineShimmer {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+
+        .divider-icon {
+            width: 28px; height: 28px;
+            animation: twinkle 2s ease-in-out infinite, spinSlow 10s linear infinite;
+            filter: drop-shadow(0 0 6px rgba(217, 155, 179, 0.5));
+        }
+
+        .divider-icon svg { width: 100%; height: 100%; }
+
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== DATE ===== */
+        .date-section {
+            text-align: center;
+            margin: 35px 0;
+            animation: fadeInUp 1s ease 1.2s both;
+        }
+
+        .date-big {
+            font-family: 'Dancing Script', cursive;
+            font-size: 42px;
+            color: var(--pink-deep);
+            font-weight: 700;
+            display: inline-block;
+            animation: pulseDate 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseDate {
+            0%, 100% { transform: scale(1); text-shadow: 0 0 8px rgba(217, 155, 179, 0.25); }
+            50% { transform: scale(1.03); text-shadow: 0 0 16px rgba(217, 155, 179, 0.5); }
+        }
+
+        .date-detail {
+            font-size: 18px;
+            color: var(--text-mid);
+            letter-spacing: 2px;
+            margin-top: 8px;
+            font-style: italic;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .date-detail svg {
+            width: 20px; height: 20px;
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        /* ===== HERO PHOTO ===== */
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 40px 0;
+            animation: fadeInUp 1s ease 1.5s both;
+            flex-wrap: wrap;
+        }
+
+        .hero-photo-frame {
+            width: 200px;
+            height: 250px;
+            border-radius: 100px 100px 20px 20px;
+            overflow: hidden;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 30px rgba(217, 155, 179, 0.4);
+            position: relative;
+            transition: transform 0.4s ease;
+            animation: photoFloat 5s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .hero-photo-frame:nth-child(1) { animation-delay: 0s; }
+        .hero-photo-frame:nth-child(3) { animation-delay: 1s; }
+
+        @keyframes photoFloat {
+            0%, 100% {
+                transform: translateY(0);
+                box-shadow: 0 10px 30px rgba(217, 155, 179, 0.4);
+            }
+            50% {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(217, 155, 179, 0.5), 0 0 25px rgba(232, 188, 208, 0.4);
+            }
+        }
+
+        .hero-photo-frame img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hero-photo-frame:hover { transform: translateY(-8px) scale(1.03); }
+        .hero-photo-frame:hover img { transform: scale(1.1); }
+
+        .heart-between {
+            width: 55px; height: 55px;
+            animation: heartbeat 1.5s ease-in-out infinite, heartGlowPulse 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .heart-between svg { width: 100%; height: 100%; }
+
+        /* ===== INVITATION TEXT ===== */
+        .invitation-text {
+            text-align: center;
+            font-size: 17px;
+            color: var(--text-dark);
+            line-height: 1.9;
+            margin: 30px 0;
+            padding: 0 20px;
+            font-style: italic;
+            animation: fadeInUp 1s ease 1.8s both;
+            position: relative;
+        }
+
+        .invitation-text::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--pink-main), transparent);
+            animation: underlineGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes underlineGlow {
+            0%, 100% { opacity: 0.4; width: 50px; }
+            50% { opacity: 1; width: 80px; }
+        }
+
+        /* ===== ALBUM ===== */
+        .album-section {
+            margin: 50px 0;
+            animation: fadeInUp 1s ease 2s both;
+        }
+
+        .album-title {
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg,
+                var(--pink-deep) 0%,
+                var(--pink-main) 50%,
+                var(--pink-deep) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmerTitle 5s linear infinite;
+            filter: drop-shadow(0 2px 4px rgba(217, 155, 179, 0.25));
+        }
+
+        @keyframes shimmerTitle {
+            to { background-position: 200% center; }
+        }
+
+        .album-subtitle {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            color: var(--text-mid);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .album-subtitle svg {
+            width: 22px; height: 22px;
+            animation: sparkleSpin 3s ease-in-out infinite;
+        }
+
+        .album-subtitle svg:last-child { animation-delay: 1.5s; }
+
+        @keyframes sparkleSpin {
+            0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.75; }
+            50% { transform: rotate(180deg) scale(1.25); opacity: 1; }
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(217, 155, 179, 0.35);
+            border: 4px solid var(--white);
+            aspect-ratio: 4/3;
+            background: var(--pink-pale);
+            animation: slideshowGlow 5s ease-in-out infinite;
+        }
+
+        @keyframes slideshowGlow {
+            0%, 100% { box-shadow: 0 15px 40px rgba(217, 155, 179, 0.35); }
+            50% { box-shadow: 0 20px 50px rgba(217, 155, 179, 0.5), 0 0 30px rgba(232, 188, 208, 0.4); }
+        }
+
+        .slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .slide.active { opacity: 1; }
+
+        .slide img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 50px 25px 20px;
+            background: linear-gradient(transparent, rgba(181, 107, 138, 0.85));
+            color: var(--white);
+            font-family: 'Dancing Script', cursive;
+            font-size: 26px;
+            text-align: center;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .slide-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.92);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 5;
+            box-shadow: 0 4px 15px rgba(181, 107, 138, 0.25);
+            animation: navGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes navGlow {
+            0%, 100% { box-shadow: 0 4px 15px rgba(181, 107, 138, 0.25); }
+            50% { box-shadow: 0 4px 18px rgba(181, 107, 138, 0.4), 0 0 12px rgba(217, 155, 179, 0.4); }
+        }
+
+        .slide-nav svg {
+            width: 22px; height: 22px;
+            stroke: var(--pink-deep);
+            transition: stroke 0.3s ease;
+        }
+
+        .slide-nav:hover, .slide-nav:active {
+            background: var(--pink-deep);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .slide-nav:hover svg, .slide-nav:active svg { stroke: white; }
+
+        .slide-nav.prev { left: 15px; }
+        .slide-nav.next { right: 15px; }
+
+        /* Dots */
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            padding: 0 10px;
+        }
+
+        .dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: var(--pink-soft);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .dot.active {
+            background: var(--pink-deep);
+            transform: scale(1.3);
+            border-color: var(--white);
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% { box-shadow: 0 0 6px rgba(181, 107, 138, 0.4); }
+            50% { box-shadow: 0 0 14px rgba(181, 107, 138, 0.7), 0 0 20px rgba(217, 155, 179, 0.5); }
+        }
+
+        .dot:hover { background: var(--pink-main); }
+
+        /* Thumbnails */
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            max-width: 700px;
+            margin: 25px auto 0;
+        }
+
+        .thumbnail {
+            aspect-ratio: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            border: 3px solid var(--white);
+            box-shadow: 0 4px 15px rgba(217, 155, 179, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.5) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            z-index: 2;
+        }
+
+        .thumbnail:hover::before { transform: translateX(100%); }
+
+        .thumbnail img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .thumbnail:hover, .thumbnail:active {
+            transform: translateY(-5px) scale(1.03);
+            border-color: var(--pink-main);
+            box-shadow: 0 8px 22px rgba(217, 155, 179, 0.4);
+        }
+
+        .thumbnail:hover img { transform: scale(1.1); }
+
+        .thumbnail.active::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(181, 107, 138, 0.4);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+            background-size: 40%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(60, 30, 42, 0.95);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .lightbox.show {
+            display: flex;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 20px;
+            border: 5px solid var(--white);
+            box-shadow: 0 20px 60px rgba(181, 107, 138, 0.5);
+            animation: zoomIn 0.4s ease;
+            transition: opacity 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            padding: 12px;
+            z-index: 10;
+        }
+
+        .lightbox-close svg { width: 100%; height: 100%; stroke: white; }
+
+        .lightbox-close:hover, .lightbox-close:active {
+            background: var(--pink-deep);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            padding: 12px;
+            z-index: 10;
+        }
+
+        .lightbox-nav svg { width: 100%; height: 100%; stroke: white; }
+
+        .lightbox-nav:hover, .lightbox-nav:active {
+            background: var(--pink-deep);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-nav.prev { left: 15px; }
+        .lightbox-nav.next { right: 15px; }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+            text-align: center;
+            padding: 0 15px;
+            max-width: 90%;
+        }
+
+        /* ===== VENUE ===== */
+        .venue-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 35px 0;
+            animation: fadeInUp 1s ease 2.3s both;
+        }
+
+        .venue-box {
+            background: rgba(253, 243, 247, 0.9);
+            border-radius: 20px;
+            padding: 25px 30px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid var(--pink-pale);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .venue-box::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 0; height: 0;
+            background: radial-gradient(circle, rgba(232, 188, 208, 0.4), transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease;
+        }
+
+        .venue-box:hover::before, .venue-box:active::before {
+            width: 400px; height: 400px;
+        }
+
+        .venue-box:hover, .venue-box:active {
+            background: rgba(250, 232, 239, 0.95);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(217, 155, 179, 0.3), 0 0 20px rgba(232, 188, 208, 0.3);
+        }
+
+        .venue-icon {
+            width: 48px; height: 48px;
+            margin: 0 auto 12px;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .venue-icon svg {
+            width: 100%; height: 100%;
+            animation: venueFloat 3s ease-in-out infinite;
+        }
+
+        .venue-box:nth-child(2) .venue-icon svg { animation-delay: 1.5s; }
+
+        @keyframes venueFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-5px) rotate(2deg); }
+        }
+
+        .venue-box:hover .venue-icon { transform: scale(1.1) rotate(-5deg); }
+
+        .venue-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            color: var(--pink-deep);
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .venue-detail {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== RSVP ===== */
+        .rsvp-section {
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease 2.6s both;
+        }
+
+        .rsvp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 50px;
+            background: linear-gradient(135deg, var(--pink-main), var(--pink-deep), var(--pink-main));
+            background-size: 200% auto;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 26px;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 22px rgba(181, 107, 138, 0.35);
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: btnShimmer 3s linear infinite, btnPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes btnShimmer {
+            to { background-position: 200% center; }
+        }
+
+        @keyframes btnPulse {
+            0%, 100% { box-shadow: 0 8px 22px rgba(181, 107, 138, 0.35); }
+            50% { box-shadow: 0 8px 28px rgba(181, 107, 138, 0.5), 0 0 25px rgba(217, 155, 179, 0.4); }
+        }
+
+        .rsvp-btn svg { width: 26px; height: 26px; transition: transform 0.4s ease; }
+
+        .rsvp-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .rsvp-btn:hover::before, .rsvp-btn:active::before { left: 100%; }
+
+        .rsvp-btn:hover, .rsvp-btn:active {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(181, 107, 138, 0.5);
+        }
+
+        .rsvp-btn:hover svg { transform: translateX(5px) rotate(-10deg); }
+
+        /* ===== SPARKLE ===== */
+        .sparkle {
+            position: absolute;
+            width: 16px; height: 16px;
+            animation: sparkleAnim 2.5s ease-in-out infinite;
+        }
+
+        .sparkle svg {
+            width: 100%; height: 100%;
+            filter: drop-shadow(0 0 6px rgba(232, 188, 208, 0.9));
+        }
+
+        @keyframes sparkleAnim {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.1) rotate(180deg); }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: var(--text-soft);
+            animation: fadeInUp 1s ease 2.9s both;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-heart {
+            width: 26px; height: 26px;
+            animation: heartbeat 1.5s ease-in-out infinite, heartGlowPulse 2s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        .footer-heart svg { width: 100%; height: 100%; }
+
+        /* ===== RIPPLE ===== */
+        .ripple {
+            position: fixed;
+            border-radius: 50%;
+            border: 2px solid var(--pink-main);
+            pointer-events: none;
+            z-index: 9998;
+            animation: rippleEffect 1s ease-out forwards;
+        }
+
+        @keyframes rippleEffect {
+            0% { width: 0; height: 0; opacity: 1; }
+            100% { width: 300px; height: 300px; opacity: 0; margin-left: -150px; margin-top: -150px; }
+        }
+
+        /* ============================================================ */
+        /* ==================== RESPONSIVE MOBILE ===================== */
+        /* ============================================================ */
+
+        /* === TABLET LỚN (≤ 1024px) === */
+        @media (max-width: 1024px) {
+            .container { padding: 30px 18px; }
+            .invitation-card { padding: 50px 40px; }
+            .title-names { font-size: 64px; }
+        }
+
+        /* === TABLET / MOBILE NGANG (≤ 768px) === */
+        @media (max-width: 768px) {
+            .container { padding: 25px 15px; }
+
+            .invitation-card {
+                padding: 45px 30px;
+                border-radius: 30px;
+            }
+
+            .title-names {
+                font-size: 52px;
+                gap: 6px;
+            }
+
+            .ampersand { width: 42px; height: 42px; }
+
+            .subtitle { font-size: 22px; }
+            .subtitle svg { width: 22px; height: 22px; }
+
+            .date-big { font-size: 36px; }
+            .date-detail { font-size: 16px; }
+
+            .hero-photo { gap: 18px; }
+            .hero-photo-frame { width: 165px; height: 210px; }
+            .heart-between { width: 45px; height: 45px; }
+
+            .invitation-text {
+                font-size: 15.5px;
+                padding: 0 12px;
+                line-height: 1.85;
+            }
+
+            .album-title { font-size: 40px; }
+            .album-subtitle { font-size: 19px; }
+
+            .thumbnail-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            .slide-caption { font-size: 22px; padding: 42px 20px 16px; }
+
+            .venue-section { gap: 15px; }
+            .venue-box { padding: 22px 25px; }
+
+            .rsvp-btn { font-size: 23px; padding: 15px 42px; }
+
+            .footer { font-size: 21px; }
+
+            .corner-decoration { width: 65px; height: 65px; }
+        }
+
+        /* === MOBILE (≤ 600px) === */
+        @media (max-width: 600px) {
+            .container { padding: 20px 12px; }
+
+            .invitation-card {
+                padding: 40px 22px;
+                border-radius: 24px;
+            }
+
+            .title-names {
+                font-size: 42px;
+                flex-direction: column;
+                gap: 5px;
+                line-height: 1.1;
+            }
+
+            .ampersand {
+                width: 38px; height: 38px;
+                margin: 2px 0;
+            }
+
+            .subtitle {
+                font-size: 19px;
+                letter-spacing: 2px;
+            }
+            .subtitle svg { width: 19px; height: 19px; }
+
+            .divider { margin: 18px 0; gap: 10px; }
+            .divider-line { width: 55px; }
+            .divider-icon { width: 24px; height: 24px; }
+
+            .date-section { margin: 25px 0; }
+            .date-big { font-size: 30px; }
+            .date-detail { font-size: 14.5px; letter-spacing: 1.5px; }
+            .date-detail svg { width: 18px; height: 18px; }
+
+            .hero-photo {
+                gap: 12px;
+                margin: 30px 0;
+            }
+            .hero-photo-frame {
+                width: 130px;
+                height: 170px;
+                border-width: 4px;
+                border-radius: 65px 65px 15px 15px;
+            }
+            .heart-between { width: 38px; height: 38px; }
+
+            .invitation-text {
+                font-size: 14.5px;
+                margin: 22px 0;
+                padding: 0 5px;
+            }
+
+            .album-section { margin: 35px 0; }
+            .album-title { font-size: 32px; }
+            .album-subtitle {
+                font-size: 17px;
+                margin-bottom: 22px;
+                gap: 6px;
+            }
+            .album-subtitle svg { width: 18px; height: 18px; }
+
+            .slideshow-container {
+                border-radius: 22px;
+                border-width: 3px;
+            }
+
+            .slide-caption {
+                font-size: 17px;
+                padding: 35px 12px 14px;
+                gap: 5px;
+            }
+            .slide-caption svg { width: 18px !important; height: 18px !important; }
+
+            .slide-nav {
+                width: 38px;
+                height: 38px;
+            }
+            .slide-nav svg { width: 16px; height: 16px; }
+            .slide-nav.prev { left: 8px; }
+            .slide-nav.next { right: 8px; }
+
+            .dots-container { gap: 8px; margin-top: 16px; }
+            .dot { width: 10px; height: 10px; }
+
+            .thumbnail-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                margin-top: 18px;
+            }
+            .thumbnail {
+                border-width: 2px;
+                border-radius: 12px;
+            }
+
+            .venue-section {
+                flex-direction: column;
+                gap: 12px;
+                margin: 25px 0;
+            }
+            .venue-box {
+                padding: 20px 22px;
+                min-width: 100%;
+            }
+            .venue-icon { width: 42px; height: 42px; }
+            .venue-title { font-size: 20px; }
+            .venue-detail { font-size: 13.5px; }
+
+            .rsvp-section { margin-top: 30px; }
+            .rsvp-btn {
+                font-size: 20px;
+                padding: 14px 36px;
+                gap: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+            .rsvp-btn svg { width: 22px; height: 22px; }
+
+            .footer {
+                font-size: 17px;
+                margin-top: 30px;
+                line-height: 1.6;
+            }
+            .footer-heart { width: 22px; height: 22px; }
+
+            .corner-decoration { width: 50px; height: 50px; }
+            .corner-tl, .corner-tr { top: 6px; }
+            .corner-bl, .corner-br { bottom: 6px; }
+            .corner-tl, .corner-bl { left: 8px; }
+            .corner-tr, .corner-br { right: 8px; }
+
+            .sparkle { width: 12px; height: 12px; }
+
+            /* Lightbox mobile */
+            .lightbox { padding: 12px; }
+            .lightbox img {
+                max-width: 95vw;
+                max-height: 75vh;
+                border-width: 3px;
+                border-radius: 14px;
+            }
+            .lightbox-close {
+                width: 42px; height: 42px;
+                top: 12px; right: 12px;
+                padding: 10px;
+            }
+            .lightbox-nav {
+                width: 42px; height: 42px;
+                padding: 10px;
+            }
+            .lightbox-nav.prev { left: 8px; }
+            .lightbox-nav.next { right: 8px; }
+            .lightbox-caption {
+                font-size: 18px;
+                bottom: 12px;
+                padding: 0 10px;
+            }
+
+            /* Giảm hiệu ứng nền để mượt hơn trên mobile */
+            .glow-orb { filter: blur(40px); }
+            .bokeh { animation-duration: 6s; }
+        }
+
+        /* === MOBILE NHỎ (≤ 380px) === */
+        @media (max-width: 380px) {
+            .container { padding: 15px 8px; }
+            .invitation-card { padding: 32px 16px; border-radius: 20px; }
+
+            .title-names { font-size: 34px; }
+            .ampersand { width: 32px; height: 32px; }
+
+            .subtitle { font-size: 16px; letter-spacing: 1.5px; }
+            .subtitle svg { width: 16px; height: 16px; }
+
+            .date-big { font-size: 26px; }
+            .date-detail { font-size: 13px; }
+
+            .hero-photo { gap: 8px; }
+            .hero-photo-frame { width: 108px; height: 142px; }
+            .heart-between { width: 30px; height: 30px; }
+
+            .invitation-text { font-size: 13.5px; }
+
+            .album-title { font-size: 28px; }
+            .album-subtitle { font-size: 15px; }
+            .slide-caption { font-size: 15px; }
+
+            .venue-title { font-size: 18px; }
+            .venue-detail { font-size: 12.5px; }
+
+            .rsvp-btn { font-size: 17px; padding: 12px 28px; }
+            .rsvp-btn svg { width: 18px; height: 18px; }
+
+            .footer { font-size: 15px; }
+            .footer-heart { width: 18px; height: 18px; }
+
+            .dot { width: 8px; height: 8px; }
+            .dots-container { gap: 6px; }
+
+            .lightbox-caption { font-size: 16px; }
+        }
+
+        /* === ĐIỆN THOẠI XOAY NGANG - landscape (≤ 768px) === */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero-photo-frame { width: 140px; height: 180px; }
+            .slideshow-container { max-width: 480px; }
+            .lightbox img { max-height: 85vh; }
+        }
+
+        /* === REDUCED MOTION (tôn trọng cài đặt người dùng) === */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .floating-icon, .petal-icon, .bokeh, .glow-orb { display: none; }
+        }
+
+        /* === TOUCH DEVICE - tối ưu tap target === */
+        @media (hover: none) {
+            .slide-nav, .lightbox-nav, .lightbox-close { min-width: 44px; min-height: 44px; }
+            .dot { min-width: 14px; min-height: 14px; padding: 2px; box-sizing: content-box; }
+            .thumbnail:hover { transform: none; }
+            .hero-photo-frame:hover { transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============= SVG SYMBOL LIBRARY ============= -->
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#d99bb3"/>
+            <stop offset="100%" stop-color="#b56b8a"/>
+        </linearGradient>
+        <linearGradient id="pinkLight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8bcd0"/>
+            <stop offset="100%" stop-color="#d99bb3"/>
+        </linearGradient>
+        <linearGradient id="peachGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f2d4e0"/>
+            <stop offset="100%" stop-color="#e8bcd0"/>
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f5e1c8"/>
+            <stop offset="100%" stop-color="#e8bcd0"/>
+        </linearGradient>
+    </defs>
+
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path fill="url(#pinkGrad)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+
+    <symbol id="icon-heart-outline" viewBox="0 0 24 24">
+        <path fill="none" stroke="url(#pinkGrad)" stroke-width="1.8" stroke-linejoin="round"
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+
+    <symbol id="icon-heart-small" viewBox="0 0 24 24">
+        <path fill="url(#pinkLight)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+
+    <symbol id="icon-heart-big" viewBox="0 0 24 24">
+        <path fill="url(#pinkGrad)" stroke="#fff" stroke-width="0.5" stroke-linejoin="round"
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        <ellipse cx="8" cy="7" rx="1.5" ry="1" fill="white" opacity="0.6" transform="rotate(-20 8 7)"/>
+    </symbol>
+
+    <symbol id="icon-sakura" viewBox="0 0 24 24">
+        <g fill="url(#pinkLight)" stroke="url(#pinkGrad)" stroke-width="0.6">
+            <path d="M12 12c0-2 1-4 3-4s2 3 0 4c2 1 4 1 4 3s-3 2-4 0c-1 2-1 4-3 4s-2-3 0-4c-2-1-4-1-4-3s3-2 4 0z"/>
+        </g>
+        <circle cx="12" cy="12" r="1.2" fill="#f2d4e0"/>
+    </symbol>
+
+    <symbol id="icon-tulip" viewBox="0 0 24 24">
+        <path d="M12 22V14" stroke="#9a6478" stroke-width="1.5" stroke-linecap="round"/>
+        <path fill="url(#pinkGrad)" d="M7 6c0-2 2-4 5-4s5 2 5 4-2 3-5 3-5-1-5-3zm0 1c-1 1-2 4 0 6 3-1 5-3 5-5-2 0-4 0-5-1zm10 0c1 1 2 4 0 6-3-1-5-3-5-5 2 0 4 0 5-1z"/>
+        <path fill="url(#pinkLight)" opacity="0.6" d="M10 5c1-1 3-1 4 0-1 2-3 2-4 0z"/>
+    </symbol>
+
+    <symbol id="icon-rose" viewBox="0 0 24 24">
+        <circle cx="12" cy="10" r="6" fill="url(#pinkGrad)"/>
+        <path fill="url(#peachGrad)" d="M12 5a5 5 0 0 0-5 5c0 2 1 3 2 4 1-1 2-2 3-2s2 1 3 2c1-1 2-2 2-4a5 5 0 0 0-5-5z" opacity="0.7"/>
+        <circle cx="12" cy="10" r="2" fill="#fae8ef"/>
+        <path d="M12 16v6M10 20l2-2 2 2" stroke="#9a6478" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path fill="url(#pinkLight)" d="M20 4c0 10-6 16-16 16 0-10 6-16 16-16z"/>
+        <path d="M4 20L20 4" stroke="#9a6478" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    </symbol>
+
+    <symbol id="icon-butterfly" viewBox="0 0 24 24">
+        <path fill="url(#pinkGrad)" d="M12 12c-2-3-6-4-8-2s0 6 2 7 4-1 6-3z" opacity="0.85"/>
+        <path fill="url(#pinkLight)" d="M12 12c2-3 6-4 8-2s0 6-2 7-4-1-6-3z" opacity="0.85"/>
+        <ellipse cx="12" cy="12" rx="0.8" ry="3" fill="#9a6478"/>
+        <circle cx="12" cy="8.5" r="1" fill="#9a6478"/>
+    </symbol>
+
+    <symbol id="icon-sparkle" viewBox="0 0 24 24">
+        <path fill="url(#goldGrad)" d="M12 2l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/>
+    </symbol>
+
+    <symbol id="icon-sparkle-small" viewBox="0 0 24 24">
+        <path fill="#f5e1c8" d="M12 4l1.5 6 6 1.5-6 1.5-1.5 6-1.5-6-6-1.5 6-1.5z"/>
+    </symbol>
+
+    <symbol id="icon-envelope" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" fill="url(#pinkLight)" stroke="url(#pinkGrad)" stroke-width="1.2"/>
+        <path d="M3 7l9 6 9-6" fill="none" stroke="url(#pinkGrad)" stroke-width="1.4" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-envelope-full" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" fill="white" stroke="url(#pinkGrad)" stroke-width="1.4"/>
+        <path d="M3 7l9 6 9-6" fill="none" stroke="url(#pinkGrad)" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="0.8" fill="#b56b8a"/>
+    </symbol>
+
+    <symbol id="icon-church" viewBox="0 0 24 24">
+        <path fill="url(#pinkLight)" stroke="url(#pinkGrad)" stroke-width="1" stroke-linejoin="round"
+              d="M12 2v4M10 4h4M12 6l-5 5v11h10V11l-5-5z"/>
+        <path fill="url(#pinkGrad)" d="M10 22v-5a2 2 0 0 1 4 0v5z"/>
+        <circle cx="12" cy="10" r="1.2" fill="#b56b8a"/>
+    </symbol>
+
+    <symbol id="icon-glass" viewBox="0 0 24 24">
+        <path fill="url(#pinkLight)" stroke="url(#pinkGrad)" stroke-width="1" stroke-linejoin="round"
+              d="M6 3h12l-2 8a4 4 0 0 1-8 0z"/>
+        <path d="M12 11v8M9 21h6" stroke="url(#pinkGrad)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="9" cy="6" rx="1" ry="1.5" fill="white" opacity="0.7"/>
+    </symbol>
+
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" fill="url(#peachGrad)" stroke="url(#pinkGrad)" stroke-width="1.2"/>
+        <rect x="3" y="5" width="18" height="4" fill="url(#pinkGrad)"/>
+        <circle cx="8" cy="3" r="1.5" fill="url(#pinkGrad)"/>
+        <circle cx="16" cy="3" r="1.5" fill="url(#pinkGrad)"/>
+        <g fill="url(#pinkGrad)">
+            <circle cx="8" cy="13" r="1"/><circle cx="12" cy="13" r="1"/><circle cx="16" cy="13" r="1"/>
+            <circle cx="8" cy="17" r="1"/><circle cx="12" cy="17" r="1"/><circle cx="16" cy="17" r="1"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-rings" viewBox="0 0 24 24">
+        <circle cx="9" cy="14" r="5" fill="none" stroke="url(#goldGrad)" stroke-width="1.8"/>
+        <circle cx="15" cy="14" r="5" fill="none" stroke="url(#pinkGrad)" stroke-width="1.8"/>
+        <path fill="url(#goldGrad)" d="M9 6l1 3h-2z"/>
+    </symbol>
+
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/>
+    </symbol>
+
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+
+    <symbol id="icon-corner-flower" viewBox="0 0 100 100">
+        <g fill="url(#pinkLight)" stroke="url(#pinkGrad)" stroke-width="1">
+            <path d="M20 20c0-8 4-14 10-14s6 10 0 14c6 4 14 6 14 12s-10 4-14-2c-4 6-6 14-12 14s-4-10 2-14c-6-4-14-6-14-12s10-4 14 2z"/>
+        </g>
+        <circle cx="30" cy="30" r="3" fill="#f2d4e0"/>
+        <path d="M15 60q5-10 15-8" fill="none" stroke="url(#pinkGrad)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M60 15q-10 5-8 15" fill="none" stroke="url(#pinkGrad)" stroke-width="1.5" stroke-linecap="round"/>
+        <g fill="url(#pinkGrad)" opacity="0.6">
+            <circle cx="55" cy="20" r="2"/><circle cx="20" cy="55" r="2"/>
+            <circle cx="70" cy="30" r="1.5"/><circle cx="30" cy="70" r="1.5"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-flower-divider" viewBox="0 0 24 24">
+        <g fill="url(#pinkLight)">
+            <circle cx="12" cy="6" r="3"/><circle cx="18" cy="12" r="3"/>
+            <circle cx="12" cy="18" r="3"/><circle cx="6" cy="12" r="3"/>
+        </g>
+        <circle cx="12" cy="12" r="2" fill="url(#pinkGrad)"/>
+    </symbol>
+</svg>
+
+<!-- ============= HIỆU ỨNG NỀN ============= -->
+<div class="ambient-glow">
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+</div>
+<div class="bokeh-layer" id="bokehLayer"></div>
+<div class="dreamy-overlay"></div>
+<div class="hearts-bg" id="heartsBg"></div>
+
+<!-- ============= NỘI DUNG ============= -->
+<div class="container">
+    <div class="invitation-card" id="invitationCard">
+
+        <div class="corner-decoration corner-tl"><svg viewBox="0 0 100 100"><use href="#icon-corner-flower"/></svg></div>
+        <div class="corner-decoration corner-tr"><svg viewBox="0 0 100 100"><use href="#icon-corner-flower"/></svg></div>
+        <div class="corner-decoration corner-bl"><svg viewBox="0 0 100 100"><use href="#icon-corner-flower"/></svg></div>
+        <div class="corner-decoration corner-br"><svg viewBox="0 0 100 100"><use href="#icon-corner-flower"/></svg></div>
+
+        <div class="sparkle" style="top: 15%; left: 8%; animation-delay: 0s;"><svg viewBox="0 0 24 24"><use href="#icon-sparkle"/></svg></div>
+        <div class="sparkle" style="top: 25%; right: 10%; animation-delay: 0.5s;"><svg viewBox="0 0 24 24"><use href="#icon-sparkle"/></svg></div>
+        <div class="sparkle" style="top: 55%; left: 5%; animation-delay: 1s;"><svg viewBox="0 0 24 24"><use href="#icon-sparkle"/></svg></div>
+        <div class="sparkle" style="top: 75%; right: 8%; animation-delay: 1.5s;"><svg viewBox="0 0 24 24"><use href="#icon-sparkle"/></svg></div>
+
+        <div class="header-text">
+            <p class="subtitle">
+                <svg viewBox="0 0 24 24"><use href="#icon-heart-small"/></svg>
+                Trân trọng kính mời
+                <svg viewBox="0 0 24 24"><use href="#icon-heart-small"/></svg>
+            </p>
+        </div>
+
+        <div class="title-names">
+            <span class="name-shimmer">Minh Anh</span>
+            <span class="ampersand"><svg viewBox="0 0 24 24"><use href="#icon-heart-big"/></svg></span>
+            <span class="name-shimmer">Tuấn Kiệt</span>
+        </div>
+
+        <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon"><svg viewBox="0 0 24 24"><use href="#icon-flower-divider"/></svg></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="date-section">
+            <div class="date-big">20 · 12 · 2025</div>
+            <div class="date-detail">
+                <svg viewBox="0 0 24 24"><use href="#icon-calendar"/></svg>
+                Thứ Bảy · 18:00
+            </div>
+        </div>
+
+        <div class="hero-photo">
+            <div class="hero-photo-frame">
+                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=500&fit=crop" alt="Cô dâu">
+            </div>
+            <div class="heart-between"><svg viewBox="0 0 24 24"><use href="#icon-heart-big"/></svg></div>
+            <div class="hero-photo-frame">
+                <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&h=500&fit=crop" alt="Chú rể">
+            </div>
+        </div>
+
+        <p class="invitation-text">
+            "Tình yêu không phải là nhìn nhau, mà là cùng nhau nhìn về một hướng."<br>
+            Chúng tôi trân trọng mời bạn đến chung vui trong ngày trọng đại nhất của đời mình.
+        </p>
+
+        <div class="album-section">
+            <h2 class="album-title">Our Love Story</h2>
+            <p class="album-subtitle">
+                <svg viewBox="0 0 24 24"><use href="#icon-sparkle-small"/></svg>
+                Khoảnh khắc ngọt ngào của chúng tôi
+                <svg viewBox="0 0 24 24"><use href="#icon-sparkle-small"/></svg>
+            </p>
+
+            <div class="slideshow-container" id="slideshow">
+                <button class="slide-nav prev" onclick="changeSlide(-1)" aria-label="Ảnh trước">
+                    <svg viewBox="0 0 24 24"><use href="#icon-chevron-left"/></svg>
+                </button>
+                <button class="slide-nav next" onclick="changeSlide(1)" aria-label="Ảnh sau">
+                    <svg viewBox="0 0 24 24"><use href="#icon-chevron-right"/></svg>
+                </button>
+            </div>
+
+            <div class="dots-container" id="dotsContainer"></div>
+            <div class="thumbnail-grid" id="thumbnails"></div>
+        </div>
+
+        <div class="venue-section">
+            <div class="venue-box">
+                <div class="venue-icon"><svg viewBox="0 0 24 24"><use href="#icon-church"/></svg></div>
+                <div class="venue-title">Lễ Thành Hôn</div>
+                <div class="venue-detail">
+                    Nhà Thờ Đức Bà<br>
+                    18:00 · Ngày 20/12/2025
+                </div>
+            </div>
+            <div class="venue-box">
+                <div class="venue-icon"><svg viewBox="0 0 24 24"><use href="#icon-glass"/></svg></div>
+                <div class="venue-title">Tiệc Cưới</div>
+                <div class="venue-detail">
+                    White Palace Convention<br>
+                    19:30 · Ngày 20/12/2025
+                </div>
+            </div>
+        </div>
+
+        <div class="rsvp-section">
+            <button class="rsvp-btn" onclick="showRSVP()">
+                Xác Nhận Tham Dự
+                <svg viewBox="0 0 24 24"><use href="#icon-envelope-full"/></svg>
+            </button>
+        </div>
+
+        <div class="footer">
+            Sự hiện diện của bạn là
+            <span class="footer-heart"><svg viewBox="0 0 24 24"><use href="#icon-heart-big"/></svg></span>
+            món quà lớn nhất
+        </div>
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Đóng">
+        <svg viewBox="0 0 24 24"><use href="#icon-close"/></svg>
+    </button>
+    <button class="lightbox-nav prev" onclick="lightboxNav(-1)" aria-label="Trước">
+        <svg viewBox="0 0 24 24"><use href="#icon-chevron-left"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="Ảnh cưới">
+    <button class="lightbox-nav next" onclick="lightboxNav(1)" aria-label="Sau">
+        <svg viewBox="0 0 24 24"><use href="#icon-chevron-right"/></svg>
+    </button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+    const albumPhotos = [
+        { src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=900&fit=crop", caption: "Khoảnh khắc đầu tiên" },
+        { src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&h=900&fit=crop", caption: "Nắm tay nhau đi khắp thế gian" },
+        { src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&h=900&fit=crop", caption: "Nụ cười hạnh phúc nhất" },
+        { src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&h=900&fit=crop", caption: "Mãi mãi bên nhau" },
+        { src: "https://images.unsplash.com/photo-1529636798458-92182e662485?w=1200&h=900&fit=crop", caption: "Yêu em từ cái nhìn đầu tiên" },
+        { src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=900&fit=crop", caption: "Chuyện tình của chúng tôi" },
+        { src: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200&h=900&fit=crop", caption: "Hạnh phúc là được ở bên em" },
+        { src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1200&h=900&fit=crop", caption: "Trọn đời bên nhau" }
+    ];
+
+    const SVG_HEART = `<svg viewBox="0 0 24 24"><use href="#icon-heart"/></svg>`;
+    const SVG_HEART_SM = `<svg viewBox="0 0 24 24"><use href="#icon-heart-small"/></svg>`;
+    const SVG_SAKURA = `<svg viewBox="0 0 24 24"><use href="#icon-sakura"/></svg>`;
+    const SVG_TULIP = `<svg viewBox="0 0 24 24"><use href="#icon-tulip"/></svg>`;
+    const SVG_ROSE = `<svg viewBox="0 0 24 24"><use href="#icon-rose"/></svg>`;
+    const SVG_LEAF = `<svg viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>`;
+    const SVG_BUTTERFLY = `<svg viewBox="0 0 24 24"><use href="#icon-butterfly"/></svg>`;
+    const SVG_SPARKLE = `<svg viewBox="0 0 24 24"><use href="#icon-sparkle"/></svg>`;
+    const SVG_RINGS = `<svg viewBox="0 0 24 24"><use href="#icon-rings"/></svg>`;
+
+    // Phát hiện mobile để giảm hiệu ứng
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ===== NỀN BAY ===== */
+    const heartsBg = document.getElementById('heartsBg');
+    const floatIcons = [SVG_HEART, SVG_HEART_SM, SVG_SAKURA, SVG_TULIP, SVG_ROSE, SVG_BUTTERFLY, SVG_SPARKLE, SVG_RINGS];
+    const petalIcons = [SVG_SAKURA, SVG_TULIP, SVG_LEAF, SVG_ROSE];
+
+    function createFloating() {
+        if (prefersReducedMotion) return;
+        const el = document.createElement('div');
+        el.className = 'floating-icon';
+        el.innerHTML = floatIcons[Math.floor(Math.random() * floatIcons.length)];
+        el.style.left = Math.random() * 100 + '%';
+        const size = Math.random() * 20 + 14;
+        el.style.width = size + 'px';
+        el.style.height = size + 'px';
+        el.style.animationDuration = (Math.random() * 8 + 8) + 's';
+        el.style.animationDelay = Math.random() * 5 + 's';
+        heartsBg.appendChild(el);
+        setTimeout(() => el.remove(), 17000);
+    }
+
+    function createPetal() {
+        if (prefersReducedMotion) return;
+        const el = document.createElement('div');
+        el.className = 'petal-icon';
+        el.innerHTML = petalIcons[Math.floor(Math.random() * petalIcons.length)];
+        el.style.left = Math.random() * 100 + '%';
+        const size = Math.random() * 14 + 16;
+        el.style.width = size + 'px';
+        el.style.height = size + 'px';
+        el.style.animationDuration = (Math.random() * 6 + 8) + 's';
+        el.style.animationDelay = Math.random() * 3 + 's';
+        el.style.opacity = Math.random() * 0.5 + 0.3;
+        heartsBg.appendChild(el);
+        setTimeout(() => el.remove(), 15000);
+    }
+
+    // Giảm tần suất trên mobile để tiết kiệm pin
+    const floatInterval = isMobile ? 1600 : 900;
+    const petalInterval = isMobile ? 2600 : 1600;
+    const initialFloatCount = isMobile ? 5 : 10;
+    const initialPetalCount = isMobile ? 3 : 5;
+
+    setInterval(createFloating, floatInterval);
+    setInterval(createPetal, petalInterval);
+    for (let i = 0; i < initialFloatCount; i++) setTimeout(createFloating, i * 300);
+    for (let i = 0; i < initialPetalCount; i++) setTimeout(createPetal, i * 500);
+
+    /* ===== BOKEH ===== */
+    const bokehLayer = document.getElementById('bokehLayer');
+    function createBokeh() {
+        if (prefersReducedMotion) return;
+        const bokeh = document.createElement('div');
+        bokeh.className = 'bokeh';
+        const size = Math.random() * 70 + 40;
+        bokeh.style.width = size + 'px';
+        bokeh.style.height = size + 'px';
+        bokeh.style.left = Math.random() * 100 + '%';
+        bokeh.style.top = Math.random() * 100 + '%';
+        bokeh.style.animationDuration = (Math.random() * 4 + 4) + 's';
+        bokeh.style.animationDelay = Math.random() * 3 + 's';
+        bokehLayer.appendChild(bokeh);
+        setTimeout(() => bokeh.remove(), 9000);
+    }
+    const bokehCount = isMobile ? 4 : 8;
+    for (let i = 0; i < bokehCount; i++) setTimeout(createBokeh, i * 400);
+    setInterval(createBokeh, isMobile ? 2000 : 1200);
+
+    /* ===== TRAIL SPARKLE (chỉ desktop) ===== */
+    if (!isMobile && !prefersReducedMotion) {
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.75) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'trail-sparkle';
+                sparkle.innerHTML = Math.random() > 0.5 ? SVG_SPARKLE : SVG_HEART_SM;
+                const size = Math.random() * 8 + 8;
+                sparkle.style.width = size + 'px';
+                sparkle.style.height = size + 'px';
+                sparkle.style.left = (e.clientX - size/2) + 'px';
+                sparkle.style.top = (e.clientY - size/2) + 'px';
+                sparkle.style.zIndex = '9997';
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 800);
+            }
+        });
+    }
+
+    /* ===== RIPPLE KHI CLICK ===== */
+    document.addEventListener('click', (e) => {
+        if (prefersReducedMotion) return;
+        const ripple = document.createElement('div');
+        ripple.className = 'ripple';
+        ripple.style.left = e.clientX + 'px';
+        ripple.style.top = e.clientY + 'px';
+        document.body.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 1000);
+    });
+
+    /* ===== SLIDESHOW ===== */
+    let currentSlide = 0;
+    let slides = [];
+    let totalSlides = albumPhotos.length;
+    let autoSlideInterval;
+
+    function buildSlideshow() {
+        const slideshow = document.getElementById('slideshow');
+        slideshow.querySelectorAll('.slide').forEach(s => s.remove());
+
+        albumPhotos.forEach((photo, i) => {
+            const slide = document.createElement('div');
+            slide.className = 'slide' + (i === 0 ? ' active' : '');
+            slide.innerHTML = `
+                <img src="${photo.src}" alt="Ảnh cưới ${i+1}" loading="${i === 0 ? 'eager' : 'lazy'}">
+                <div class="slide-caption">
+                    <svg viewBox="0 0 24 24" style="width:22px;height:22px;flex-shrink:0;"><use href="#icon-heart-small"/></svg>
+                    ${photo.caption}
+                </div>
+            `;
+            slideshow.appendChild(slide);
+        });
+
+        slides = document.querySelectorAll('.slide');
+        totalSlides = slides.length;
+    }
+
+    function initIndicators() {
+        const dotsContainer = document.getElementById('dotsContainer');
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        const thumbnails = document.getElementById('thumbnails');
+        thumbnails.innerHTML = '';
+        albumPhotos.forEach((photo, i) => {
+            const thumb = document.createElement('div');
+            thumb.className = 'thumbnail' + (i === 0 ? ' active' : '');
+            thumb.innerHTML = `<img src="${photo.src}" alt="thumb ${i+1}" loading="lazy">`;
+            thumb.onclick = () => goToSlide(i);
+            thumbnails.appendChild(thumb);
+        });
+    }
+
+    function startAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => changeSlide(1), 4500);
+    }
+
+    function resetAutoSlide() { startAutoSlide(); }
+
+    function goToSlide(index) {
+        if (!slides.length) return;
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (index + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+        updateIndicators();
+        resetAutoSlide();
+    }
+
+    function changeSlide(direction) { goToSlide(currentSlide + direction); }
+
+    function updateIndicators() {
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+        document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    /* ===== LIGHTBOX ===== */
+    let lightboxIndex = 0;
+
+    function openLightbox(index) {
+        lightboxIndex = index;
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightboxImg');
+        const caption = document.getElementById('lightboxCaption');
+        img.src = albumPhotos[index].src;
+        caption.textContent = albumPhotos[index].caption;
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
+    function lightboxNav(direction) {
+        lightboxIndex = (lightboxIndex + direction + albumPhotos.length) % albumPhotos.length;
+        const img = document.getElementById('lightboxImg');
+        const caption = document.getElementById('lightboxCaption');
+        img.style.opacity = '0';
+        setTimeout(() => {
+            img.src = albumPhotos[lightboxIndex].src;
+            caption.textContent = albumPhotos[lightboxIndex].caption;
+            img.style.opacity = '1';
+        }, 200);
+    }
+
+    document.getElementById('thumbnails').addEventListener('click', (e) => {
+        const thumb = e.target.closest('.thumbnail');
+        if (thumb) {
+            const idx = Array.from(thumb.parentNode.children).indexOf(thumb);
+            openLightbox(idx);
+        }
+    });
+
+    document.getElementById('slideshow').addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') openLightbox(currentSlide);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox.classList.contains('show')) {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lightboxNav(-1);
+            if (e.key === 'ArrowRight') lightboxNav(1);
+        }
+    });
+
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') closeLightbox();
+    });
+
+    /* ===== SWIPE CHO MOBILE ===== */
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const slideshowEl = document.getElementById('slideshow');
+    slideshowEl.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    slideshowEl.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) changeSlide(1);
+            else changeSlide(-1);
+        }
+    }, { passive: true });
+
+    // Swipe cho lightbox
+    const lightboxEl = document.getElementById('lightbox');
+    lightboxEl.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightboxEl.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) lightboxNav(1);
+            else lightboxNav(-1);
+        }
+    }, { passive: true });
+
+    buildSlideshow();
+    initIndicators();
+    startAutoSlide();
+
+    /* ===== RSVP ===== */
+    function showRSVP() {
+        for (let i = 0; i < 30; i++) {
+            const heart = document.createElement('div');
+            heart.innerHTML = SVG_HEART;
+            heart.style.cssText = `
+                position: fixed; left: 50%; top: 50%;
+                width: ${Math.random() * 20 + 18}px;
+                height: ${Math.random() * 20 + 18}px;
+                pointer-events: none; z-index: 9999;
+                transition: all 1.5s ease-out;
+                filter: drop-shadow(0 0 8px rgba(217, 155, 179, 0.7));
+            `;
+            document.body.appendChild(heart);
+
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.random() * 300 + 100;
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance;
+
+            requestAnimationFrame(() => {
+                heart.style.transform = `translate(${x}px, ${y}px) scale(0) rotate(${Math.random()*720}deg)`;
+                heart.style.opacity = '0';
+            });
+
+            setTimeout(() => heart.remove(), 1600);
+        }
+
+        setTimeout(() => {
+            const toast = document.createElement('div');
+            toast.innerHTML = `
+                <svg viewBox="0 0 24 24" style="width:26px;height:26px;flex-shrink:0;"><use href="#icon-envelope-full"/></svg>
+                <span>Cảm ơn bạn đã xác nhận! Hẹn gặp bạn trong ngày vui</span>
+                <svg viewBox="0 0 24 24" style="width:22px;height:22px;flex-shrink:0;"><use href="#icon-heart-big"/></svg>
+            `;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: ${isMobile ? '20px' : '30px'};
+                left: 50%;
+                transform: translateX(-50%) translateY(100px);
+                background: linear-gradient(135deg, #d99bb3, #b56b8a);
+                color: white;
+                padding: ${isMobile ? '14px 20px' : '18px 30px'};
+                border-radius: 50px;
+                font-family: 'Dancing Script', cursive;
+                font-size: ${isMobile ? '16px' : '19px'};
+                box-shadow: 0 10px 30px rgba(181, 107, 138, 0.5);
+                z-index: 10000;
+                transition: transform 0.5s ease;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                max-width: 92%;
+                text-align: center;
+            `;
+            document.body.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.style.transform = 'translateX(-50%) translateY(0)';
+            });
+
+            setTimeout(() => {
+                toast.style.transform = 'translateX(-50%) translateY(100px)';
+                setTimeout(() => toast.remove(), 500);
+            }, 3500);
+        }, 500);
+    }
+
+    /* ===== PARALLAX (chỉ desktop) ===== */
+    if (!isMobile) {
+        document.addEventListener('mousemove', (e) => {
+            const card = document.getElementById('invitationCard');
+            const x = (e.clientX / window.innerWidth - 0.5) * 3;
+            const y = (e.clientY / window.innerHeight - 0.5) * 3;
+            card.style.transform = `perspective(1500px) rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            document.getElementById('invitationCard').style.transform = '';
+        });
+    }
+</script>
+</body>
+</html>
